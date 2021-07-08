@@ -1,0 +1,13 @@
+<div class="flex flex-row justify-between">
+    {% if page.previous_page %}
+    <a href="{{ page.previous_page.url|url }}" title="{{ page.previous_page.title }}">&#8592; Page précédente</a>
+    {% else %}
+    <span>&#8592; Page précédente</span>
+    {% endif %}
+
+    {% if page.next_page %}
+    <a href="{{ page.next_page.url|url }}" title="{{ page.next_page.title }}"/>Page suivante &#8594;</a>
+    {% else %}
+    <span>Page suivante &#8594;</span>
+    {% endif %}
+</div>
